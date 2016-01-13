@@ -16,7 +16,7 @@ Use:
 get_weather(location, airport, date)
 
 Variables:
-location -- list of locations
+location -- list of locations in city,state format
 date -- list of dates to gather weather
 
 All lists must be the same length!!
