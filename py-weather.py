@@ -24,6 +24,7 @@ from warnings import simplefilter
 from time import sleep
 from re import search
 from MySQLdb import DateFromTicks
+import getpass
 
 
 class NullHandler(Handler):
@@ -58,7 +59,7 @@ logger.addHandler(NullHandler())
 class Store:
 	def __init__(self, **args):
 		user = raw_input("Please enter your MySQL username: ")
-		pw = raw_input("Please enter your MySQL password: ")
+		pw = getpass.getpass("Please enter your MySQL password: ")
 		db = raw_input("Please enter the name of the MySQL database: ")
 		
 		args = {'user': user, 'passwd': pw, 'db': db, 'charset': 'utf8'}
